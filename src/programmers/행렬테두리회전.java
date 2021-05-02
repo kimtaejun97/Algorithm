@@ -1,6 +1,6 @@
-package codingtest;
+package programmers;
 
-public class p2 {
+public class 행렬테두리회전 {
     public int[] solution(int rows, int columns, int[][] queries) {
         int[] answer = new int[queries.length];
         int ansc=0;
@@ -13,14 +13,15 @@ public class p2 {
                 rc[i][j] = (i-1) * columns + j;
             }
         }
-        for(int i=0; i<rc.length; i++)
-            System.arraycopy(rc[i], 0, copyrc[i], 0, rc[0].length);
+
+        for(int i=1; i<rc.length; i++)
+            System.arraycopy(rc[i], 1, copyrc[i], 1, rc[i].length-1);
 
         for(int[] query: queries){
             int x1 = query[0];
             int y1 = query[1];
-            int x2 = query[0];
-            int y2 = query[1];
+            int x2 = query[2];
+            int y2 = query[3];
 
             int buff = rc[x1][y1];
             //left col
@@ -49,18 +50,11 @@ public class p2 {
             }
             answer[ansc] = minnum;
             ansc ++;
-            for(int i=0; i<rc.length; i++)
-                System.arraycopy(rc[i], 0, copyrc[i], 0, rc[0].length);
+            for(int i=1; i<rc.length; i++)
+                System.arraycopy(rc[i], 1, copyrc[i], 1, rc[i].length-1);
 
         }
 
         return answer;
-    }
-
-    public static void main(String[] args) {
-        p2 p = new p2();
-        int[][] q = {{2,2,5,4},{3,3,6,6},{5,1,6,3}};
-        int[] re = p.solution(6,6,q);
-        System.out.println(re);
     }
 }
