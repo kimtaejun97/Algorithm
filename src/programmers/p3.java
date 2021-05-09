@@ -1,4 +1,4 @@
-package codingtest;
+package programmers;
 
 
 import java.util.Stack;
@@ -11,7 +11,6 @@ public class p3 {
         int top= 0;
         int bottom= n-1;
         Stack<Integer> zMemory= new Stack<>();
-
 
         for(String cm : cmd){
             if(cm.length() >1){

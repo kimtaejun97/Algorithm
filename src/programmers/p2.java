@@ -1,4 +1,4 @@
-package codingtest;
+package programmers;
 
 public class p2 {
     public int[] solution(String[][] places) {
@@ -76,7 +76,6 @@ public class p2 {
                          }
                        }
                    }
-
                 }
                 rPartition =false;
                 bPartition = false;
@@ -91,18 +90,4 @@ public class p2 {
 
         return answer;
     }
-
-    public static void main(String[] args) {
-        String[][] places ={{"OOOOO", "OOOOO", "OOOOO", "OOOOO", "OOOOO"},
-            {"OOOOO", "OPOOO", "OPPOO", "OOOOO", "OOOOO"},
-            {"OOOOO", "OOOPO", "OOOOO", "OOOOO", "OOOOO"},
-            {"OOOOO", "OOOPO", "OOOOO", "OOOOO", "OOOOO"},
-            {"OOOOO", "OOPOO", "OOOOO", "OOOOO", "OOOOO"}};
-
-        p2 p = new p2();
-        for(int i: p.solution(places))
-            System.out.println(i);
-
-    }
-
 }
