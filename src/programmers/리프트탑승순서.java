@@ -1,10 +1,10 @@
-package codingtest;
+package programmers;
 
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class p2 {
+public class 리프트탑승순서 {
     public int[] solution(int[] t, int[] r) {
         int[] answer = new int[r.length];
         int count = 0;
@@ -84,7 +84,7 @@ public class p2 {
         int[] t ={0,0,1,3,0};
         int[] r ={0,0,1,2,3};
 
-        p2 p = new p2();
+        리프트탑승순서 p = new 리프트탑승순서();
         int[]answer =  p.solution(t,r);
 
         for(int i :answer)

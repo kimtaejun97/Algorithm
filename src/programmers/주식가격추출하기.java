@@ -1,8 +1,8 @@
-package codingtest;
+package programmers;
 
 import java.util.TreeMap;
 
-public class p1 {
+public class 주식가격추출하기 {
     public int[] solution(String code, String day, String[] data) {
         int[] answer;
         String[] spData;
@@ -32,17 +32,6 @@ public class p1 {
         return answer;
     }
 
-    public static void main(String[] args) {
-        p1 p = new p1();
-        String code = "012345";
-        String day = "20190620";
-        String[] data = {"price=80 code=987654 time=2019062113","price=90 code=012345 time=2019062014","price=120 code=987654 time=2019062010","price=110 code=012345 time=2019062009","price=95 code=012345 time=2019062111"};
-
-        int[] answer = p.solution(code, day, data);
-        for(int v :answer)
-            System.out.println(v);
-
-    }
 
 }
 
