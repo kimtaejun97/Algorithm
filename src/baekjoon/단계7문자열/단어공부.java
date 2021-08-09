@@ -21,9 +21,6 @@ public class 단어공부 {
             }};
 
         String word = br.readLine().toUpperCase();
-        if(word.length()>MAX_LENGTH){
-            throw new IllegalArgumentException("단어가 너무 깁니다.");
-        }
 
         //알파벳 카운트
         for(char c : word.toCharArray()){
