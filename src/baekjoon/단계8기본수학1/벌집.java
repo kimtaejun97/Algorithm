@@ -28,7 +28,7 @@ public class 벌집 {
                 }
                 n++;
             }
-            
+
             System.out.println(n+2);
         }
 
