@@ -1,4 +1,4 @@
-package codingtest;
+package programmers;
 
 public class 유용한금융정보 {
 

@@ -1,6 +1,6 @@
-package codingtest;
+package programmers;
 
-public class p2 {
+public class 서버요청분배 {
     public int[][] solution(int servers, boolean sticky, int[] requests) {
         int[][] answer = new int[servers][];
 
@@ -47,16 +47,4 @@ public class p2 {
         return answer;
     }
 
-    public static void main(String[] args) {
-        p2 c = new p2();
-        int[][] solution = c.solution(3, true, new int[]{1,1, 2,1,3,3,2});
-
-        for(int[] a : solution){
-
-            for(int b : a)
-                System.out.println(b);
-            System.out.println("/");
-        }
-
-    }
 }
