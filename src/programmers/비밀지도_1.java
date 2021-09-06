@@ -33,10 +33,4 @@ public class 비밀지도_1 {
         return answer;
     }
 
-    public static void main(String[] args) {
-        비밀지도_1 test = new 비밀지도_1();
-        String[] solution = test.solution(6, new int[]{46, 33, 33, 22, 31, 50}, new int[]{27, 56, 19, 14, 14, 10});
-
-    }
-
 }

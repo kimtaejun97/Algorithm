@@ -55,3 +55,34 @@ scores.stream().reduce(0,Integer::sum);
 - 두 라인 모두 Stream 내의 요소들을 int값으로 더하기 위한 코드이다.
 - 하지만 속도를 측정해보면 mapToInt가 더 좋은 성능을 보여준다
 - 🤔 reduce의 경우에는 박싱, 언박싱의 과정을 거치기 때문에 속도가 더 느리다.
+
+
+# 📌 Map Sort와 getOrDefault
+***
+
+### 🧐 Map.Entry.comparingBy*
+```java
+List<Map.Entry<Integer, Integer>> orderByValue = elmCount.entrySet().stream()
+            .sorted(Map.Entry.comparingByValue())
+            .collect(Collectors.toList());
+```
+- comparingByValue | comparingByKey를 사용하Map을 정렬할 수 있다.
+- 기본적으로 오름차순, 내림차순으로 정렬하고 싶다면 아래와 같이 할 수 있다.
+```java
+.sorted(reverseOrder(Map.Entry.comparingByValue))
+```
+
+
+### 🧐 getOrDefault
+```java
+if(elmCount.containsKey(elmValue)){
+    elmCount.put(elmValue, elmCount.get(elmValue) +1);
+}
+else{
+   elmCount.put(elmValue, 1);
+}
+```
+```java
+ map.put(n, map.getOrDefault(n, 0) + 1);
+```
+- 위의 코드를 getOrDefault를 사용하여 아래 코드로 변경할 수 있다
