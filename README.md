@@ -32,5 +32,26 @@ protected boolean removeEldestEntry(Map.Entry<K,V> eldest){
 
 
 
-# 📌 Matcher, Pattern
+# 📌 Matchees, Pattern
 ****
+```java
+String pattern = "^[A-Z]*$";
+boolean regex = Pattern.matches(pattern, elm);
+        if(regex){
+            return true;
+        }
+
+        return false;
+```
+- 두번째 인자의 문자열이 패턴과 일치하면 true 반환.
+
+# 📌 Stream, reduce와 matToInt
+***
+```java
+answer = scores.stream().mapToInt(score -> score).sum();
+
+scores.stream().reduce(0,Integer::sum);
+```
+- 두 라인 모두 Stream 내의 요소들을 int값으로 더하기 위한 코드이다.
+- 하지만 속도를 측정해보면 mapToInt가 더 좋은 성능을 보여준다
+- 🤔 reduce의 경우에는 박싱, 언박싱의 과정을 거치기 때문에 속도가 더 느리다.
