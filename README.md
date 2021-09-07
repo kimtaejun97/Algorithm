@@ -73,7 +73,7 @@ List<Map.Entry<Integer, Integer>> orderByValue = elmCount.entrySet().stream()
 ```
 
 
-### 🧐 getOrDefault
+### 🧐 getOrDefaultm
 ```java
 if(elmCount.containsKey(elmValue)){
     elmCount.put(elmValue, elmCount.get(elmValue) +1);
