@@ -32,7 +32,7 @@ protected boolean removeEldestEntry(Map.Entry<K,V> eldest){
 
 
 
-# 📌 Matchees, Pattern
+# 📌 Matches, Pattern
 ****
 ```java
 String pattern = "^[A-Z]*$";
