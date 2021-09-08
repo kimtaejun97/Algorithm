@@ -2,7 +2,7 @@ package programmers;
 
 import java.util.Arrays;
 
-public class line1_괄호검사 {
+public class l1_괄호검사 {
     public int solution(String input){
         int answer = 0;
 

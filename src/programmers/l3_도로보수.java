@@ -3,7 +3,7 @@ package programmers;
 import java.util.ArrayList;
 import java.util.List;
 
-public class line3_도로보수 {
+public class l3_도로보수 {
     public int solution(String road, int n){
         int answer = 0;
         List<Integer> zeroIndex = new ArrayList<>();
@@ -84,7 +84,7 @@ public class line3_도로보수 {
     }
 
     public static void main(String[] args) {
-        line3_도로보수 test = new line3_도로보수();
+        l3_도로보수 test = new l3_도로보수();
         int solution = test.solution("111011110011111011111100011111", 3);
         System.out.println(solution);
     }

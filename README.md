@@ -86,3 +86,61 @@ else{
  map.put(n, map.getOrDefault(n, 0) + 1);
 ```
 - 위의 코드를 getOrDefault를 사용하여 아래 코드로 변경할 수 있다
+
+
+# 📌 StringBuffer : 문자열의 특정위치 치환.
+****
+```java
+String road = "00010101101"
+StringBuffer stringBuffer = new StringBuffer(road);
+StringBuffer newRoad = stringBuffer.replace(startIdx, endIndex, "1");
+
+```
+- startIdx부터 endIdx -1 까지의 범위를 3번째 인자의 문자열로 치환한다.
+
+# 📌 완전탐색: n개에서 m개를 선택, 재귀사용.
+***
+```java
+public int pick(String road,List<Integer> zeroIndex, int n){
+        if(zeroIndex.size() == 0){
+            return getRoadLength(road);
+        }
+
+        int maxLength = 0;
+        StringBuffer stringBuffer;
+        List<Integer> myZeroIndex = new ArrayList<>();
+
+        // idex List 복사
+        myZeroIndex.addAll(zeroIndex);
+
+        for(int i=0; i<myZeroIndex.size(); i++){
+            myZeroIndex.clear();
+            myZeroIndex.addAll(zeroIndex);
+            stringBuffer = new StringBuffer(road);
+
+            int idx = myZeroIndex.remove(i);
+            int length = 0;
+
+            // 도로 한 곳 보수
+            StringBuffer newRoad = stringBuffer.replace(idx, idx+1, "1");
+
+            // 재귀로 보수된 도로 받아오기
+            if(n > 1){
+                length = pick(newRoad.toString(), myZeroIndex, n-1);
+            }
+            // 마지막 재귀호출
+            else{
+                length = getRoadLength(newRoad.toString());
+            }
+            if(length > maxLength){
+                maxLength = length;
+            }
+        }
+        return maxLength;
+    }
+```
+> - n개의 선택지에서 m개를 고를 때 가장 최선의 선택이 되도록 하는 알고리즘.
+> - 메서드 에서는 n-1개의 선택지로 다시 재귀호출.
+> - 재귀호출에서는 자신에게 주어진 선택지를 모두 탐색. 최적의 값을 반환.
+> - 즉 자신이 1개를 고르고, 나머지 선택지를 재귀호출로 넘겨준다. 각 재귀호출 메서드에서는 또 그중 하나를 선택하고 재귀호출.
+> m개를 선택 한 후에 값 계산.

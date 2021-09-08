@@ -3,7 +3,7 @@ package programmers;
 import java.util.ArrayList;
 import java.util.List;
 
-public class line2_부정행위가능성지수 {
+public class l2_부정행위가능성지수 {
     public int solution(String answerSheet, String[] sheets){
         int answer = 0;
 
@@ -53,7 +53,7 @@ public class line2_부정행위가능성지수 {
     }
 
     public static void main(String[] args) {
-        line2_부정행위가능성지수 test = new line2_부정행위가능성지수();
+        l2_부정행위가능성지수 test = new l2_부정행위가능성지수();
         int solution = test.solution("24551", new String[]{"24553", "24553", "24553", "24553"});
         System.out.println(solution);
 
