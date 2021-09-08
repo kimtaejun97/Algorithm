@@ -1,6 +1,6 @@
 package programmers;
 
-public class p2 {
+public class 거리두기확인하기_2 {
     public int[] solution(String[][] places) {
         int[] answer = new int[places.length];
         int placeNum = 0;
@@ -63,9 +63,7 @@ public class p2 {
                                    answer[placeNum] = 0;
                                    break;
                                }
-
                            }
-
                        }
                        if(j-1>=0 && i+1<5){
                          if(place[i+1].charAt(j-1)=='P'){
