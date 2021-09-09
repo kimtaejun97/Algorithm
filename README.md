@@ -200,3 +200,17 @@ Arrays.sort(arr, new Comparator<..>{...})
 - poll() -> 가장 앞의 요소를 꺼내온다.(remove) 없다면 null
 - remove() -> 맨 앞의 요소 제거. boolean 반환.
 - clear() -> 큐를 비운다.
+
+
+# 📌 String 내림차순 정렬
+***
+```java
+char[] chars = numString.toCharArray();
+Arrays.sort(chars);
+
+StringBuilder sb = new StringBuilder(new String(chars)).reverse();
+System.out.println(sb.toString());
+```
+- 먼저 String을 charArray로 만들어 준 후 Arrays.sort()를 이용하여 오름차순 정렬.
+- charArray를 다시 new String(char[])로 String으로 만들어준다.
+- StringBuilder.reverse로 역순으로 정렬.
