@@ -144,3 +144,42 @@ public int pick(String road,List<Integer> zeroIndex, int n){
 > - 재귀호출에서는 자신에게 주어진 선택지를 모두 탐색. 최적의 값을 반환.
 > - 즉 자신이 1개를 고르고, 나머지 선택지를 재귀호출로 넘겨준다. 각 재귀호출 메서드에서는 또 그중 하나를 선택하고 재귀호출.
 > m개를 선택 한 후에 값 계산.
+
+
+
+# 📌 Iterator 을 이용한 ConcurrentModificationException 해결
+***
+> Collection을 for문으로 탐색하다가 해당 인덱스 , 또는 Object로 요소를 add/remove 하려고 하면, 다른 요소들의 인덱스에 변화가 생기기 때문에 예외가 발생한다.
+> 
+- remove
+```java
+ for(Iterator<String> it = dir.iterator(); it.hasNext();){
+        if(it.next().startsWith(split[1])){
+        it.remove();
+    }
+}
+```
+- add
+    - 다른 리스트에 넣어 두었다가 순회가 끝난 후 addAll
+```
+
+- Iterator를 사용하고, remove할 때에는 iterator 자체를 remove해서 제거해준다.
+
+# 📌 Arrays.sort
+***
+> 배열의 오름차순, 내림차순 정렬.
+
+- 오름차순 정렬
+```java
+Arrays.sort(arr);
+```
+
+- 내림차순 정렬
+```java
+Arrays.sort(arr,Collections.reverseOrder())
+```
+
+- 커스텀 정렬
+```java
+Arrays.sort(arr, new Comparator<..>{...})
+```
