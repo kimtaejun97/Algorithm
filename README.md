@@ -183,3 +183,20 @@ Arrays.sort(arr,Collections.reverseOrder())
 ```java
 Arrays.sort(arr, new Comparator<..>{...})
 ```
+
+
+# 📌 우선순위 큐 
+***
+```java
+ PriorityQueue<Integer> que = new PriorityQueue<>(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer integer, Integer t1) {
+                return 0;
+            }
+        });
+```
+- Comparator을 생략하면 기본적인 오름차순.
+- pick() -> 가장 앞의 요소를 확인. 없다면 null
+- poll() -> 가장 앞의 요소를 꺼내온다.(remove) 없다면 null
+- remove() -> 맨 앞의 요소 제거. boolean 반환.
+- clear() -> 큐를 비운다.
