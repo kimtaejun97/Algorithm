@@ -214,3 +214,5 @@ System.out.println(sb.toString());
 - 먼저 String을 charArray로 만들어 준 후 Arrays.sort()를 이용하여 오름차순 정렬.
 - charArray를 다시 new String(char[])로 String으로 만들어준다.
 - StringBuilder.reverse로 역순으로 정렬.
+
+> Collections.reverseOrder()를 사용하기 위해 Charactor 배열을 생성하고, charAt으로 배열을 채우는 방법도 가능하다.
