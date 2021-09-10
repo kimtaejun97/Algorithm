@@ -221,3 +221,30 @@ System.out.println(sb.toString());
 - StringBuilder.reverse로 역순으로 정렬.
 
 > Collections.reverseOrder()를 사용하기 위해 Charactor 배열을 생성하고, charAt으로 배열을 채우는 방법도 가능하다.
+
+
+# 📌 이분 탐색
+***
+```java
+while(start <= end){
+    mid = (start + end) / 2;
+    if(uniqueCoors.get(mid) == c){
+        index = mid;
+        break;
+    }
+    else if(uniqueCoors.get(mid) > c){
+        end = mid -1;
+    }
+    else{
+        start = mid +1;
+    }
+}
+```
+- 기본적인 이분탐색 알고리즘.
+
+````java
+Arrays.binarySearch(arr, findValue);
+````
+- 값이 존재하면 index를 반환.
+- 존재하지 않으면 해당 배열에 들어간다면 들어가게 되는 index의 음수 -1을 반환한다
+> ex) {1,3,4,5} -> 2를 찾는다면 -2 반환. 
