@@ -73,7 +73,7 @@ List<Map.Entry<Integer, Integer>> orderByValue = elmCount.entrySet().stream()
 ```
 
 
-### 🧐 getOrDefaultm
+### 🧐 getOrDefault
 ```java
 if(elmCount.containsKey(elmValue)){
     elmCount.put(elmValue, elmCount.get(elmValue) +1);
@@ -159,11 +159,12 @@ public int pick(String road,List<Integer> zeroIndex, int n){
     }
 }
 ```
+- Iterator를 사용하고, remove할 때에는 iterator 자체를 remove해서 제거해준다.
+
+
 - add
     - 다른 리스트에 넣어 두었다가 순회가 끝난 후 addAll
-```
-
-- Iterator를 사용하고, remove할 때에는 iterator 자체를 remove해서 제거해준다.
+    
 
 # 📌 Arrays.sort
 ***
@@ -183,7 +184,11 @@ Arrays.sort(arr,Collections.reverseOrder())
 ```java
 Arrays.sort(arr, new Comparator<..>{...})
 ```
-
+> 🖍 Comparator을 사용할 때는 IllegalArgumentException이 발생하지 않도록 항상 -1,0,1을 반환할 수 있도록 구현한다
+> ```java
+> return o1 - o2 or 조건문을 사용하여 -1,0,1을 모두 반환할 수 있도록 구현.
+> ```
+> 🤔 sort함수에서는 Comparator의 검증을 적극적으로 하지는 않지만 입력 데이터에 따라 실행 도중 잘못되었다는 증거를 발견하게 되면 런타임 예외를 발생시킨다.
 
 # 📌 우선순위 큐 
 ***
