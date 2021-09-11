@@ -45,7 +45,7 @@ boolean regex = Pattern.matches(pattern, elm);
 ```
 - 두번째 인자의 문자열이 패턴과 일치하면 true 반환.
 
-# 📌 Stream, reduce와 matToInt
+# 📌 Stream, reduce와 mapToInt
 ***
 ```java
 answer = scores.stream().mapToInt(score -> score).sum();
