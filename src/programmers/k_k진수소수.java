@@ -1,7 +1,7 @@
 package programmers;
 
 
-public class k진수소수 {
+public class k_k진수소수 {
     public int solution(int n, int k) {
         int answer = 0;
         StringBuilder sb = new StringBuilder();
@@ -19,7 +19,7 @@ public class k진수소수 {
 
         // P 탐색
         for(String number : numbers){
-            if(isPrime(Integer.valueOf(number))){
+            if(isPrime(Long.valueOf(number))){
                 answer ++;
             }
         }
@@ -28,7 +28,7 @@ public class k진수소수 {
         return answer;
     }
 
-    public boolean isPrime(int num){
+    public boolean isPrime(long num){
         if(num == 1){
             return false;
         }
@@ -41,8 +41,8 @@ public class k진수소수 {
     }
 
     public static void main(String[] args) {
-        k진수소수 test = new k진수소수();
-        int solution = test.solution(0011010100, 10);
+        k_k진수소수 test = new k_k진수소수();
+        int solution = test.solution(1111010100, 2);
         System.out.println(solution);
 
 

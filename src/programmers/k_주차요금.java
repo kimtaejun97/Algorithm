@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class 주차요금 {
+public class k_주차요금 {
     public int[] solution(int[] fees, String[] records) {
         int[] answer = {};
         Map<String, String> in = new HashMap<>();
@@ -82,7 +82,7 @@ public class 주차요금 {
     }
 
     public static void main(String[] args) {
-        주차요금 test = new 주차요금();
+        k_주차요금 test = new k_주차요금();
         int[] solution = test.solution(new int[]{181, 5000, 11, 600}, new String[]{"00:00 5961 IN","03:35 5961 OUT"});
 
         System.out.println(Arrays.toString(solution));

@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 // 불량이용자 신고
-public class 불량이용자신고 {
+public class k_불량이용자신고 {
     public int[] solution(String[] id_list, String[] report, int k) {
         int[] answer = new int[id_list.length];
         int p = 0;
@@ -64,7 +64,7 @@ public class 불량이용자신고 {
     }
 
     public static void main(String[] args) {
-        불량이용자신고 test = new 불량이용자신고();
+        k_불량이용자신고 test = new k_불량이용자신고();
         test.solution(new String[] {"muzi", "frodo", "apeach", "neo"}, new String[]{"muzi frodo", "apeach frodo", "frodo neo", "muzi neo", "apeach muzi"}, 2);
 
     }

@@ -1,6 +1,6 @@
 package programmers;
 
-public class 건물파괴게임 {
+public class k_건물파괴게임 {
     public int solution(int[][] board, int[][] skill) {
         int answer = 0;
 
