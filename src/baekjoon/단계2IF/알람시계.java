@@ -4,19 +4,19 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class 두수비교하기 {
+public class 알람시계 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] input = br.readLine().split(" ");
-        int a = Integer.parseInt(input[0]);
-        int b = Integer.parseInt(input[1]);
+        int h = Integer.parseInt(input[0]) + 24;
+        int m = Integer.parseInt(input[1]);
 
-        if(a > b){
-            System.out.println(">");
-        }else if(a < b){
-            System.out.println("<");
-        }else{
-            System.out.println("==");
+        if(m < 45){
+            h = (h - 1);
+            m = 60 + m;
         }
+        h %= 24;
+        m -= 45;
+        System.out.println(String.format("%d %d", h,m));
     }
 }
