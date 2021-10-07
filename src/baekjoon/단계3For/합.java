@@ -1,4 +1,4 @@
-package baekjoon.단계3FOR;
+package baekjoon.단계3For;
 
 import java.io.BufferedReader;
 import java.io.IOException;
