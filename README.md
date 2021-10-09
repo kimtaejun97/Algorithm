@@ -257,3 +257,27 @@ Arrays.binarySearch(arr, findValue);
 List<String> sub = new ArrayList<>(parent.subList(start, end));
 ```
 - 위 처럼 사용하면 참조가 아니고 리스트의 일부를 복사한 리스트가 생성된다.
+
+# 📌 BigInteger, BigDecimal
+***
+- 기본형 이상의 수를 다룰 때 사용한다.
+```java
+BigInteger number = new BigInteger(num);
+number.add(BigInteger val);
+number.subtract(BigInteger val);
+number.multiply(BigInteger val);
+number.divide(BigInteger val);
+number.remainder(BigInteger val);
+
+// 기본형으로 반환
+number.intValue()
+...
+
+// 기본형 반환, 타입의 범위를 벗어나면 예외 발생.
+number.intValueExact()
+```
+- BigDecimal 또한 동일하게 사용한다.
+
+- String으로 변환 후 숫자를 더해 출력하는 것보다 속도가 느리다.
+
+
