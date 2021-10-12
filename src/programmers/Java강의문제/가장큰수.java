@@ -21,13 +21,4 @@ public class 가장큰수 {
 
         return sb.toString();
     }
-
-    public static void main(String[] args) {
-        가장큰수 test = new 가장큰수();;
-        String solution = test.solution(new int[]{111111,1111211221,121111});
-        System.out.println(solution);
-    }
-
-
-
 }
