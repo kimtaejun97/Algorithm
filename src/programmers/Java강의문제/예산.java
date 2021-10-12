@@ -6,15 +6,13 @@ public class 예산 {
         int sum = 0;
         int left = 0;
         int right = 0;
-        int mid = 0;
 
         for(int budget : budgets){
-            sum += budget;
             if(budget > right) right = budget;
         }
-        if(sum <= M) return right;
 
         // mid == 상한액
+        int mid = 0;
         while(left <= right){
             mid = (left + right) / 2;
             sum = 0;
