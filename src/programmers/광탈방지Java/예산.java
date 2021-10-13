@@ -1,5 +1,8 @@
 package programmers.광탈방지Java;
 
+/*
+탐색 - 이분탐색
+ */
 public class 예산 {
     public int solution(int[] budgets, int M) {
         int answer =0;

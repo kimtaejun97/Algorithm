@@ -1,5 +1,8 @@
 package programmers.광탈방지Java;
 
+/*
+그리디
+ */
 public class 기지국설치 {
     public int solution(int n, int[] stations, int w) {
         int answer = 0;

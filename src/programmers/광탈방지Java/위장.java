@@ -3,6 +3,9 @@ package programmers.광탈방지Java;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+해시 (Hash)
+ */
 public class 위장 {
     public int solution(String[][] clothes) {
         Map<String, Integer> numberOfClothes = new HashMap<>();
