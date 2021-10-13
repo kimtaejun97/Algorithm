@@ -1,4 +1,4 @@
-package programmers.Java강의문제;
+package programmers.광탈방지Java;
 
 import java.util.*;
 

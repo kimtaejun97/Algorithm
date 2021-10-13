@@ -1,4 +1,4 @@
-package programmers.Java강의문제;
+package programmers.광탈방지Java;
 
 public class 기지국설치 {
     public int solution(int n, int[] stations, int w) {

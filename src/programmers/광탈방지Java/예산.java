@@ -1,4 +1,4 @@
-package programmers.Java강의문제;
+package programmers.광탈방지Java;
 
 public class 예산 {
     public int solution(int[] budgets, int M) {
@@ -30,7 +30,12 @@ public class 예산 {
                 answer = mid;
             }
         }
-
         return answer;
+    }
+
+    public static void main(String[] args) {
+        예산 test =  new 예산();
+        int solution = test.solution(new int[]{10, 20, 30}, 100);
+        System.out.println("solution = " + solution);
     }
 }
