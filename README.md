@@ -280,4 +280,32 @@ number.intValueExact()
 
 - String으로 변환 후 숫자를 더해 출력하는 것보다 속도가 느리다.
 
-
+# 📌 BFS - queue
+***
+1. 큐 생성.
+```java
+Queue<Integer> queue = new LinkedList<>();
+```
+2. 첫 노드 탐색.
+```java
+queue.add(0);
+visited[0] = true;
+```
+3. 노드 탐색.
+```java
+while(!queue.isEmpty()){
+    // queue에서 이번 순서 노드를 가져옴.
+    int node = queue.poll();
+    
+    // 해당 노드가 조건에 부합하는지 검사.
+    if(조건 검사){...}
+    
+    // 현재 노드의 방문하지 않은 자식 노드들을 queue에 추가.
+    for(자식 노드 i){
+        if(!visited[i]){
+            queue.add(i);
+            visited[i] = true;
+        }
+    }
+}
+```
