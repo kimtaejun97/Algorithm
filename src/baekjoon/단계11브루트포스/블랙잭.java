@@ -12,7 +12,6 @@ public class 블랙잭 {
         int result = 0;
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
         StringTokenizer stringTokenizer = new StringTokenizer(br.readLine(), " ");
 
         int numberOfCard = Integer.parseInt(stringTokenizer.nextToken());
