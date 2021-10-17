@@ -309,3 +309,29 @@ while(!queue.isEmpty()){
     }
 }
 ```
+
+
+# 📌 배열의 깊은 복사.
+***
+- 1차원 배열의 경우 
+```java
+boolean copy = originArr.clone();
+
+boolean copy = System.arraycopy(origin,0, copy, 0, origin.length);
+```
+- 2차원 배열
+- 위처럼 단순히 clone을 하게 된다면 origin[i][j]에서 j를 가르키는 origin[i] 부분만 깊은 복사가 되고 실제 값은 깊은 복사가 되지 않는다.
+```java
+boolean copy = new boolean[n][n];
+
+// 1번 방법
+for(int i=0; i<n; i++){
+    copy[i] = originArr[i].clone();   
+}
+// 2번 방법
+for(int i=0; i<n; i++){
+    System.arraycopy(origin[i],0, copy[i], 0, origin[i].length);
+}
+```
+
+
