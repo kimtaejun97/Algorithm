@@ -1,6 +1,9 @@
 package baekjoon.동적계획법;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 import static java.lang.System.in;
 
@@ -10,19 +13,22 @@ public class RGB거리 {
     static int[][] price;
     static int answer = 0;
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(in));
 
-        N = sc.nextInt();
+
+        N = Integer.parseInt(br.readLine());
         // [house][R, G, B]
         // 0 은 비우는 값.
         house = new int[N][4];
         price = new int[N][4];
 
+        StringTokenizer st;
         // i번째 집을 RGB 색으로 칠할때의 비용.
         for(int i =0; i<house.length; i++){
+            st = new StringTokenizer(br.readLine(), " ");
             for(int c =1; c<=3; c++){
-                house[i][c] = sc.nextInt();
+                house[i][c] = Integer.parseInt(st.nextToken());
             }
         }
         // 첫번 째 집 비용
