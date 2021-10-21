@@ -1,5 +1,6 @@
 package nhn_pretest;
 
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,6 +13,7 @@ public class SIzeOfArea_pre1 {
         int sizeOfArea = Integer.parseInt(br.readLine());
         Map<Integer, ArrayList<Coordinate>> group = new HashMap<>();
         char[][] matrix = new char[sizeOfArea][sizeOfArea];
+
 
         // 행렬 데이터 수신.
         for(int i=0; i<sizeOfArea; i++){
