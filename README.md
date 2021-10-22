@@ -335,3 +335,10 @@ for(int i=0; i<n; i++){
 ```
 
 
+# 📌 Comparator.comparingInt()
+***
+```java
+int[][] arr = new int[n][n];
+Arrays.sort(line, Comparator.comparingInt(c -> c[0]));
+```
+- arr[n][0] 값을 가지고 오름차순 정렬.
