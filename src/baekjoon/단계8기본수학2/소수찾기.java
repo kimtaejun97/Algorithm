@@ -34,8 +34,6 @@ public class 소수찾기 {
                     isPrime[j] = false;
                 }
             }
-
-
         }
     }
 }

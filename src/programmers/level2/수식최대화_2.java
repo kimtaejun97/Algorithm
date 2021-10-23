@@ -1,4 +1,4 @@
-package programmers;
+package programmers.level2;
 
 
 public class 수식최대화_2 {

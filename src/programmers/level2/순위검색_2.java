@@ -1,4 +1,4 @@
-package programmers;
+package programmers.level2;
 
 public class 순위검색_2 {
     public int[] solution(String[] info, String[] queries) {

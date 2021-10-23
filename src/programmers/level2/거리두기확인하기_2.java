@@ -1,4 +1,4 @@
-package programmers;
+package programmers.level2;
 
 public class 거리두기확인하기_2 {
     public int[] solution(String[][] places) {
