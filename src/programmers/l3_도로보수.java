@@ -34,7 +34,6 @@ public class l3_도로보수 {
 
         // idex List 복사
         myZeroIndex.addAll(zeroIndex);
-
         for(int i=0; i<myZeroIndex.size(); i++){
             myZeroIndex.clear();
             myZeroIndex.addAll(zeroIndex);
