@@ -342,3 +342,15 @@ int[][] arr = new int[n][n];
 Arrays.sort(line, Comparator.comparingInt(c -> c[0]));
 ```
 - arr[n][0] 값을 가지고 오름차순 정렬.
+
+
+# 📌 최대공약수(GCD)와 최소공배수 : 유클리드 호제법
+***
+### ☝️ 최대 공약수
+- a >=b 이고, r = a % b 일때 GCD(a,b) == GCD(b,r)
+  - ex) GCD(259,63) == GCD(63,7) == GCD(7, 0) -> 최대공약수는 7이다.
+  
+
+### ☝️ 최소 공배수
+- a,b 그리고 a와 b의 최대공약수를 l 이라고 할 때, a=Al, b=Bl 이다.
+- 최소 공배수는 A * B * l 이므로 a * b / l 이다.
