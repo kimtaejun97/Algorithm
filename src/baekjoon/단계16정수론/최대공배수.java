@@ -19,11 +19,7 @@ public class 최대공배수 {
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
 
-            if(b > a){
-                int buff = a;
-                a = b;
-                b = buff;
-            }
+
             int GCD = gcd(a,b);
             sb.append(a * b /GCD).append("\n");
         }

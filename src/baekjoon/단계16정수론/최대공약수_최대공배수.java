@@ -19,12 +19,6 @@ public class 최대공약수_최대공배수 {
         int b = Integer.parseInt(st.nextToken());
         int LCM = a * b;
 
-        if(b > a){
-            int buff = a;
-            a = b;
-            b = buff;
-        }
-
         int r = a % b;
         while(r > 0){
             a = b;
