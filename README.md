@@ -382,4 +382,20 @@ private static int gcd(int a, int b) {
 - nCk = n-1Ck-1 + n-1Ck
 - 팩토리얼은 12를 넘어가면 int를 벗어나고 20을 넘어가면 long을 벗어난다.
 
+# 📌 Array To String
+***
+```java
+int[] arr = {1,2,3};
+String s = Arrays.toString(arr);
+// [1,2,3]
 
+String[] arr2 = {"a","b","c"};
+String s2 = String.join("", arr);
+// abc
+        
+Arrays.stream(arr2).collect(Collectors.joining());
+// abc
+
+String.valueOf(charArr);
+// abc
+```
