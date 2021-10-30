@@ -1,4 +1,4 @@
-package baekjoon.단계9재귀;
+package baekjoon.단계10재귀;
 
 import java.io.BufferedReader;
 import java.io.IOException;

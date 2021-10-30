@@ -1,4 +1,4 @@
-package baekjoon.단계16정수론;
+package baekjoon.단계17정수론;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package baekjoon.단계8기본수학2;
+package baekjoon.단계9기본수학2;
 
 import java.io.BufferedReader;
 import java.io.IOException;

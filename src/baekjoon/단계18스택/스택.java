@@ -1,4 +1,4 @@
-package baekjoon.단계17스택;
+package baekjoon.단계18스택;
 
 import java.io.BufferedReader;
 import java.io.IOException;
