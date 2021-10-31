@@ -399,3 +399,27 @@ Arrays.stream(arr2).collect(Collectors.joining());
 String.valueOf(charArr);
 // abc
 ```
+
+# 📌 DeQue
+> 앞ㅍ 뒤로 요소를 입 출력 가능, 스택, 큐로 모두 사용할 수 있다. 
+```java
+Deque<T> deque = new ArrayDeque, LinkedList ..
+```
+### ✏️ 요소 삽입.
+- addFirst, OfferFirst, push : 덱의 앞에 요소 삽입, add는 예외를, offer는 boolean값 반환.
+- addList, OfferLast, add : 덱의 뒤에 요소 삽입.
+- addAll(Collection ) : collection의 모든 데이터를 덱의 뒤쪽에 삽입.
+
+### ✏️ 요소 제거.
+- removeFirst, pollFirst, remove, poll, pop : 앞쪽에서 제거 후 반환, remove는 덱이 비어있으면 예외를, poll은 null을 리턴.
+- removeLast, pollLast : 뒤에서 제거하고 반환.
+- removeFirstOccurrence(Obj o), remove(Obj o) : 앞쪽에서 부터 탐색하며 o를 찾아 제거.
+- removeLastOccurrence(Obj o) : 뒤쪽에서 부터 탐색하며 o를 찾아 제거.
+
+### ✏️ 조회
+- getFirst, PeekFirst, peek : 덱의 가장 앞 요소를 반환, 덱이 비어있으면 get은 예외를, peek는 null을 반환.
+- getLast, peekLast : 덱의 가장 뒷 요소 반환.
+- contain(Obj o) : o가 포함되어 있는지 확인.
+- size
+- iterator : 덱의 앞쪽부터 순차적으로 실행되는 iterator
+- descendingIterator : 뒤쪽부터 순차적으로 실행.
