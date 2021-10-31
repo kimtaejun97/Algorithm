@@ -400,7 +400,7 @@ String.valueOf(charArr);
 // abc
 ```
 
-# 📌 DeQue
+q# 📌 DeQue
 > 앞ㅍ 뒤로 요소를 입 출력 가능, 스택, 큐로 모두 사용할 수 있다. 
 ```java
 Deque<T> deque = new ArrayDeque, LinkedList ..
