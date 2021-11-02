@@ -42,6 +42,14 @@ public class 행렬곱셈 {
             }
         }
 
+//        for(int i=0; i<n; i++){
+//            for(int j=0; j<k; j++){
+//                for(int t=0; t<m; t++){
+//                    newArr[i][j] += A[i][t] * B[t][j];
+//                }
+//            }
+//        }
+
         StringBuilder sb = new StringBuilder();
         for(int[] row : newArr){
             for(int elm : row){
