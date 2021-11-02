@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 
 /*
 (N!/K!(N-k)! % MOD)
-= ( (N! % MOD) * (K!(N-K)!)^(MOD-2) % MOD ) % MOD
+= ( (N! % MOD) * ((K!(N-K)!) % MOD)^(MOD-2) % MOD ) % MOD
  */
 public class 이항계수3 {
     static long MOD = 1000000007;
@@ -35,6 +35,4 @@ public class 이항계수3 {
         if(mod %2 == 0) return (half * half) % MOD;
         else return ((half * half % MOD) * value) % MOD;
     }
-
-
 }
