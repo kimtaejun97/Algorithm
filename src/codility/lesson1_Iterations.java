@@ -1,6 +1,6 @@
 package codility;
 
-public class task1 {
+public class lesson1_Iterations {
     public int solution(int N) {
         StringBuilder sb = new StringBuilder();
         int answer =0;
@@ -28,7 +28,7 @@ public class task1 {
     }
 
     public static void main(String[] args) {
-        task1 test = new task1();
+        lesson1_Iterations test = new lesson1_Iterations();
         int solution = test.solution(328);
         System.out.println("solution = " + solution);
     }
