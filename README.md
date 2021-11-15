@@ -442,3 +442,29 @@ a^p == a (mod p)
 - 곱의 형태로 나타나므로 모듈러의 분배법칙 가능.
 - 최종 적으로 구해야 하는 값은
 => ((N! mod p) * (K!(N-K)!)^(p-2) mod p) mod p
+  
+
+
+# 📌 N진수 변환하기
+***
+### 1. N으로 나눈뒤 나머지를 뒤집어 읽기.
+```java
+final static String[] convert  = new String[]{
+            "0","1","2","3","4","5","6","7","8","9",
+            "A","B","C","D","E","F"
+        };
+
+StringBuilder convNum = new StringBuilder();
+while(num > 0){
+    convNum.append(convert[num % n]);
+    num /= n;
+}
+
+convNum.reverse();
+```
+
+### 2. Integer.toString(int n, int radix)
+```java
+String result = Integer.toStirng(num, N);
+```
+- Long.toString 등 가능.
