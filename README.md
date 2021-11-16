@@ -311,6 +311,32 @@ List<String> sub = new ArrayList<>(parent.subList(start, end));
 ```
 - 위 처럼 사용하면 참조가 아니고 리스트의 일부를 복사한 리스트가 생성된다.
 
+# 📌 List <-> Array
+***
+### List To Array
+```java
+String[] answer = menuList.toArray(new String[menuList.size()]);
+```
+
+### Array To List
+```java
+List<T> list = Arrays.toList(arr);
+```
+- 새로운 List를 반환하는 것이 아닌. 해당 배열에 대한 List View를 반환한다.
+- 변환된 list에 값을 추가하는 것이 불가능(예외 발생). 원래의 배열의 값을 변경하면 함께 변경된다.
+
+```java
+List<T> list = new ArrayList<>(Arrays.toList(arr));
+```
+- 위와 달리 새로운 ArrayList 객체를 생성한다.
+
+```java
+List<T> list = Stream.of(maxCount).collect(Collectors.toList());
+```
+- Stream을 이용한 변환.
+
+# 
+
 # 📌 BigInteger, BigDecimal
 ***
 - 기본형 이상의 수를 다룰 때 사용한다.
