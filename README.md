@@ -244,7 +244,7 @@ System.out.println(sb.toString());
 > Collections.reverseOrder()를 사용하기 위해 Charactor 배열을 생성하고, charAt으로 배열을 채우는 방법도 가능하다.
 
 
-# 📌 이분 탐색
+# 📌 이분 탐색(Binary Search)
 ***
 ```java
 while(start <= end){
@@ -262,6 +262,38 @@ while(start <= end){
 }
 ```
 - 기본적인 이분탐색 알고리즘.
+
+### ☝️ LowerBound, UpperBound
+```java
+private static int getLowerBound(List<Integer> arr, int target) {
+    int left = 0;
+    int right = arr.length -1;
+    int mid = 0;
+
+    while(left<=right){
+        mid = (left + right) / 2;
+
+        // target이 아닐때까지 right을 조임. -> target이 아닌 가장 첫 인덱스.
+        if(target > arr[mid]) left = mid +1;
+        else right = mid -1;
+    }
+    return right;
+}
+
+private static int getUpperBound(List<Integer> arr, int target) {
+    int left = 0;
+    int right = arr.length -1;
+    int mid = 0;
+
+    while(left<=right){
+        mid = (left + right) / 2;
+
+        if(target >= arr[mid]) left = mid +1;
+        else right = mid -1;
+    }
+    return left;
+}
+```
 
 ````java
 Arrays.binarySearch(arr, findValue);

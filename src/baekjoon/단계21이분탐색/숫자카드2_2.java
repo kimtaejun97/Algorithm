@@ -26,14 +26,14 @@ public class 숫자카드2_2 {
         for(int i=0; i<m; i++){
             int num = Integer.parseInt(st.nextToken());
             // 왼쪽 오른쪽 끝 찾기.
-            int leftBound = getLeftBound(num);
-            int rightBound = getRightBound(num);
+            int leftBound = getLowerBound(num);
+            int rightBound = getUpperBound(num);
             sb.append(rightBound - leftBound -1).append(" ");
         }
         System.out.print(sb.toString());
     }
 
-    private static int getLeftBound(int target) {
+    private static int getLowerBound(int target) {
         int left = 0;
         int right = card.length -1;
         int mid = 0;
@@ -42,13 +42,13 @@ public class 숫자카드2_2 {
             mid = (left + right) / 2;
 
             // target이 아닐때까지 right을 조임. -> target이 아닌 가장 첫 인덱스.
-            if(target <= card[mid]) right = mid -1;
-            else left = mid +1;
+            if(target > card[mid]) left = mid +1;
+            else right = mid -1;
         }
         return right;
     }
 
-    private static int getRightBound(int target) {
+    private static int getUpperBound(int target) {
         int left = 0;
         int right = card.length -1;
         int mid = 0;
