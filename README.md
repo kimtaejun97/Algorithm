@@ -317,6 +317,10 @@ List<String> sub = new ArrayList<>(parent.subList(start, end));
 ```java
 String[] answer = menuList.toArray(new String[menuList.size()]);
 ```
+```java
+int[] intArr = IntegerList.stream().mapToInt(i->i).toArray();
+```
+- Wrapper 클래스에서 원시데이터 배열로의 변환은 mapToInt, mapToDouble 등을 사용하여 먼저 언박싱.
 
 ### Array To List
 ```java
