@@ -326,13 +326,13 @@ int[] intArr = IntegerList.stream().mapToInt(i->i).toArray();
 
 ### Array To List
 ```java
-List<T> list = Arrays.toList(arr);
+List<T> list = Arrays.asList(arr);
 ```
 - 새로운 List를 반환하는 것이 아닌. 해당 배열에 대한 List View를 반환한다.
 - 변환된 list에 값을 추가하는 것이 불가능(예외 발생). 원래의 배열의 값을 변경하면 함께 변경된다.
 
 ```java
-List<T> list = new ArrayList<>(Arrays.toList(arr));
+List<T> list = new ArrayList<>(Arrays.asList(arr));
 ```
 - 위와 달리 새로운 ArrayList 객체를 생성한다.
 
@@ -340,6 +340,13 @@ List<T> list = new ArrayList<>(Arrays.toList(arr));
 List<T> list = Stream.of(maxCount).collect(Collectors.toList());
 ```
 - Stream을 이용한 변환.
+
+#### 🖍 그러나 위의 방법들은 원시타입을 Wrapper 클래스로 변환해주지 않는다
+- Arrays.asList(int[]) -> List<int[]>
+```java
+Arrays.stream(arr).boxed().collect(Collectors.toList());
+```
+- stream을이용하여 Wrapper 타입으로 변환 후 리스트로.
 
 # 
 

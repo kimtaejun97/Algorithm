@@ -15,7 +15,6 @@ public class 뉴스클러스터링_2 {
         List<String> union = new ArrayList<>();
         List<String> intersection = new ArrayList<>();
 
-
         // 다시 풀기 setA, setB 모두 리스트로 생성
 
         // A 다중 집합 생성.
