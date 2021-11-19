@@ -33,6 +33,7 @@ public class 뉴스클러스터링_2 {
 
         }
 
+
         if(setA.size() ==0 && setB.size() == 0){
             return 65536;
         }
