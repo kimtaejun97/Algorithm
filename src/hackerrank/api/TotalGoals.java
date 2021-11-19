@@ -70,6 +70,8 @@ public class TotalGoals {
 
         engine.eval(script.toString());
 
+
+
         int totalPage = (int)engine.get("totalPages");
         int totalGoals = (int)engine.get("totalGoals");
 
