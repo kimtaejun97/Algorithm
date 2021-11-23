@@ -3,7 +3,7 @@ package programmers.level1;
 import java.util.Arrays;
 
 /*
-그리디 
+그리디
  */
 public class 예산 {
     public int solution(int[] department, int budget) {
