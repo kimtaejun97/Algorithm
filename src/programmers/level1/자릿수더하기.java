@@ -8,7 +8,7 @@ public class 자릿수더하기 {
 //        for(String num : nums){
 //            answer += Integer.parseInt(num);
 //        }
-        
+
         // 0.02ms , 87.6 MB
         while(n > 0){
             answer += n % 10;
