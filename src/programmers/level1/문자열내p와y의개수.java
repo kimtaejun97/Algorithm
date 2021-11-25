@@ -1,5 +1,7 @@
 package programmers.level1;
 
+import java.util.Vector;
+
 public class 문자열내p와y의개수 {
     boolean solution(String s) {
         int count = 0;
