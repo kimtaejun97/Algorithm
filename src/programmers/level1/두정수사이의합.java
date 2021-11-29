@@ -13,7 +13,7 @@ public class 두정수사이의합 {
 //        int A = Math.min(a,b);
 //        int B = Math.max(a,b);
 //        return (A+B)*(B-A+1)/2;
-        
+
         return answer;
     }
 }
