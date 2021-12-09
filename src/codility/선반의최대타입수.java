@@ -9,7 +9,7 @@ import java.util.Set;
 연속된 R개의 선반을 사용 불가로 지정할 때
 사용 유형을 가장 많이 남기는.
  */
-public class p2 {
+public class 선반의최대타입수 {
     public int solution(int[] A, int R) {
         int answer = 0;
         int[] types = new int[100001];
