@@ -2,7 +2,7 @@ package codility;
 /*
 결과: [순찰선 , 잠수함, 구축함]
  */
-public class p3 {
+public class 선박의수 {
 
     public int[] solution(String[] B) {
         int[] answer = new int[3];
