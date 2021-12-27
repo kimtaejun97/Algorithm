@@ -19,7 +19,7 @@ public class 문자열내맘대로정렬하기 {
             else{
                 ArrayList<String> duplicate = new ArrayList<>(){};
                 duplicate.add(string);
-                indexN.put(charN, duplicate)
+                indexN.put(charN, duplicate);
             }
         }
         List<List<String>> sorted = indexN.entrySet().stream()
